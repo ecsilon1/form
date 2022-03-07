@@ -1,0 +1,233 @@
+html{
+    height: 100%;
+    width: 100%;
+ 
+}
+
+
+
+h2{
+   font-size: 1.5rem;
+    background-color: #90EE90;
+    color:azure;
+    text-align: center;
+padding:  0.5rem;
+
+}
+
+
+label{
+color: #DCDCDC;
+padding-left: 1rem;
+padding-top: 5px;
+/* display: block; */
+}
+
+/* stil diferit pt labelul tip file */
+
+.exception{
+    display: inline-block;
+    padding-right: 0;
+    
+}
+
+
+label[for="firstName"]{
+    display: block;
+    margin: 0;
+}
+
+input[type="text"],input[type="date"], input[type="email"], select, input[type="password"]
+{
+    box-sizing: border-box;
+   width: 80%;
+     border: 0.5px solid #ccc;
+display: block;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  padding: 1rem;
+  border-radius: 25px;
+  height: 2.5rem;
+margin-left: 1rem;
+
+}
+
+
+.radioChanges{
+padding: 0;
+color: black;
+
+}
+
+ input[type="radio"], p {
+   margin-left: 1rem;
+   color: #DCDCDC;
+  
+} 
+
+
+.display-block{
+    display: block;
+}
+/* why not working?
+label input[type="radio"] {
+    color: red;
+} */
+
+
+/* acum trec la tabelul 2 */
+
+input[type="checkbox"]{
+    margin-left: 1rem;
+   
+
+}
+
+
+label[for="terms"],label[for="newsletter"]{
+    padding-left: 0;
+    
+  
+}
+
+textarea{
+    box-sizing: border-box;
+    height: 4rem;
+    width: 80%;
+     border: 1px solid #ccc;
+
+  background-color: #f8f8f8;
+  font-size: 16px;
+  padding: 1rem;
+  border-radius: 25px;
+margin-left: 1rem;
+    
+}
+
+
+.finalField, .secondField, .firstField{
+    border: 1px solid grey;
+    
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+   line-height: 2rem;
+    width: 40%;
+    box-sizing: border-box;
+  
+    margin: 0 auto;
+  margin-top: 1.5rem;
+ 
+  
+}
+
+
+
+
+.finalField:hover, .secondField:hover, .firstField:hover{
+    box-shadow: 3px 3px 2px 3px grey;
+}
+
+
+
+.finalField{
+  
+    box-sizing: border-box;
+   margin: auto;
+  margin-top: 124px;
+ 
+}
+
+
+.hidden{
+    display: none;
+}
+
+
+
+
+/* de ce se mareste butonul cand scot margin? */
+.btn {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    border: none;
+    font-family: Georgia;
+    color: #ffffff;
+    font-size: 14px;
+    background: #278ccf;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+ margin: 5px;
+  }
+  
+  .btn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+  }
+
+  .button-group{
+     margin-top: 1rem;
+     margin-left: 0.5rem;
+     margin-right   : 0.5rem;
+     display: flex;
+     justify-content:space-between;
+    
+  }
+
+
+  /* .firstField{
+    position:relative;
+    }
+    .text-error{
+    position:absolute;
+    right:0;
+    top:0px;
+    background:red;
+    color:white;
+    border-radius:5px;
+    padding:5px 3px;
+    } */
+
+ 
+    .firstButtonModifications{
+        margin-top: 1rem;
+     margin-left: 0.5rem;
+     margin-right   : 0.5rem;
+    padding-left: 12rem;
+display: flex;
+justify-content: flex-end;
+
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+    .firstButtonModifications{
+        padding: 0;
+    }
+
+    .btn{
+        padding: 8px 8px;
+    }
+  }

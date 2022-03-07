@@ -1,0 +1,207 @@
+/* selector {
+    proprietate: value;
+} */
+/* (0, 0, 1) */
+img {
+    height: 100px;
+}
+
+body {
+    font-size: 14px;
+}
+/* Selector universal = selecteaza toate elementele HTML */
+* {
+    font-size: 18px;
+}
+/* <=> */
+/* html, body, p, div, h1, h2, h3, .... {
+    font-size: 12px;
+} */
+
+/* div.web-dev, h1, div p {
+    color: red;
+} */
+/* div.web-dev, h1, div p <=> cu a scrie separat */
+/* div.web-dev {
+    color: red;
+}
+h1 {
+    color: red;
+}
+div p {
+    color: red;
+} */
+
+
+/* .fixed-header {
+    position: fixed;
+} */
+
+/* (1, 0, 0) */
+#fontSize72 {
+    font-size:72px;
+}
+
+/* (0, 1, 0) */
+.bold {
+    font-weight: 700;
+}
+/* (0, 1, 0) */
+.italics {
+    font-style: italic;
+}
+
+/******COMBINATORS********/
+/* 
+space
+> 
++ 
+~
+*/
+/* toate elementele span care au h1 ca stramos */
+/* (0, 0, 2) */
+h1 span {
+    font-size: 50px;
+}
+
+/* toatele elementele p care au parinte direct un div */
+/* (0, 0, 2) */
+div > p {
+    color: red;
+}
+
+/* ( 0, 0, 2)*/
+div.web-dev p {
+    color: green;
+}
+
+/* doar p care au primul frate mai mare tot p */
+p + p {
+    color: blue;
+}
+
+article + p {
+    color: violet;
+}
+
+/* doar p care au un frate mai mare h3 */
+h3 ~ p {
+    color: orange;
+}
+
+/*
+.web-dev {  toate elementele (p, div in exemplu ) care au clasa web-dev
+
+}
+div.web-dev = doar elementele div care au clasa web-dev 
+*/
+/* (1, 0, 0) */
+#acelDiv {
+
+}
+/* (1, 0, 1) */
+div#acelDiv {
+
+}
+/* (1, 1, 1) */
+div.web-dev#acelDiv {
+
+}
+
+/* 
+Specificitate selector
+(0, 0, 0) 
+0.1 - id = cate id-uri am in selector
+0.2 - class + pseudo-clase = cate clase am in selector
+0.3 - elemente + psuedo-elemente
+*/
+
+/* PSEUDO-ELEMENTE 
+::selection
+::first-line
+::first-letter
+::before
+::after
+*/
+
+/* (0, 0, 1) */
+::selection {
+    background-color: yellow;
+    color: red;
+}
+/* (0, 1, 4)*/
+div.teaching article p::first-line {
+    text-decoration: underline;
+}
+/* (0, 1, 4) */
+div.teaching article p::first-letter {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+/* (0, 1, 3) */
+div.todo-list li::before {
+    content: "✅";
+} 
+/* (0, 1, 3) */
+div.todo-list li::after {
+    content: " done";
+} 
+
+
+/* PSEUDO-CLASE */
+p:first-child {
+    color: magenta;
+}
+
+ul:hover {
+    color: red;
+}
+
+p:nth-child(4){ 
+    background-color:aquamarine;
+}
+p:only-child {
+    text-decoration: line-through;
+}
+
+p:first-of-type{
+    font-style: italic;
+}
+
+/* li:nth-of-type(2n+1) {
+    background-color: lightpink;
+} */
+li:nth-child(2n+1) {
+    background-color: lightpink;
+}
+
+/* LINK pseudo-class 
+LVHA - conteaza ordinea
+:link -
+:visited
+:hover 
+:active
+*/
+
+a:link {
+    color: red;
+}
+a:visited {
+    color: orange;
+}
+a:hover {
+    color: green;
+}
+a:active{
+    color: purple;
+} 
+/* se poate si pseudo-clase combinate */
+a:visited:hover {
+    color: lightcoral;
+}
+
+/* (0, 3, 1)  */
+p:first-of-type:nth-child(3):hover {
+    color:aquamarine;
+}

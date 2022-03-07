@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tema 2\reset.css">
+    <link rel="stylesheet" href="assets/css/forms.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+</head>
+
+<body>
+    <form class="col-12"  action="https://formspree.io/f/mdoyyqgn" method="post" id="form" >
+    <div class="firstField ">
+        <h2>Detalii utilizator</h2>
+     
+            <label class="exception" for="myfile">Importa imagine:</label>
+            <input type="file" id="myFile" name="filename">
+           
+            <label for="firstName">Nume:</label>
+            <input type="text" name="firstName" placeholder="Introdu numele" id="firstName" 
+                >
+            
+           
+            <label for="familyName">Prenume:</label>
+            <input type="text" name="lastName" placeholder="Introdu numele" id="familyName" 
+                required>
+                
+            <p>Sex:</p>
+            
+            <input class="col-3" type="radio" value="Male" id="male" name="sex" required>
+            <label  class="radioChanges col-3" for="male">Masculin</label>
+            
+            <input class="col-3" type="radio" value="Female" id="Female" name="sex">
+            <label class="radioChanges col-3" for="Female">Feminin</label>
+
+            
+            <label class="display-block" for="date">Data nasterii:</label>
+            <input type="date" id="date" name="date"  required>
+           
+
+            <label for="cnp">CNP:</label>
+            
+            <input type="text" id="cnp" name="cnp" pattern="[0-9]+" title="please insert only numbers" minlength="13"
+                maxlength="13" required>
+                
+               
+                <div class="firstButtonModifications .col-12">
+                    <!-- tre sa apas de 2 ori cu onclick -->
+          <button onmousedown="next() " class="btn " id="firstButton"  type="button">Next</button>
+     
+    </div>
+        </div>
+    <!-- Campul al doilea -->
+
+        <div class="secondField " id="name">
+            <h2>Detalii contact</h2>
+            <label for="telefon">Numar telefon:</label>
+            <input type="text" id="telefon" name="telefon" pattern="[0-9]+" title="please insert only numbers"
+                minlength="10" maxlength="10" required>
+               
+          
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+           
+
+            <label for="judet" required>Judet:</label>
+            <select name="judet" id="judet" required>
+                <option value="">-</option>
+                <option value="ARGES">ARGES</option>
+                <option value="BUCURESTI">BUCURESTI</option>
+                <option value="ARAD">BRASOV</option>
+
+            </select>
+            
+            <label for="oras">Oras:</label>
+            <select name="oras" id="oras" required>
+                <option value="">-</option>
+                <option value="CAMPULUNG">CAMPULUNG</option>
+                <option value="PITESTI">PITESTI</option>
+                <option value="Covasna">Covasna</option>
+            </select>
+            
+
+            <label class="display-block" for="description">Adresa:</label>
+            <textarea name="description" id="description" cols="30" rows="5" required
+                placeholder="Introduceti adresa"></textarea>
+             
+
+            <label class="display-block" for="cod-postal">Cod Postal:</label>
+            <input type="text" pattern="[0-9]+" name="cod postal" required>
+           
+
+
+            <div class="button-group">
+                <button class="btn" id="firstBackButton"  type="button">Back</button>
+            <button class="btn" id="secondButton"  type="button">Next</button>
+           
+        </div>
+        </div>
+    
+
+        
+        <div class="finalField  ">
+            <h2>Credentiale</h2>
+                <label for="pwd">Parola:</label>
+                <input type="password" id="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+                    required
+                    >
+                  
+
+                <label for="pwdInput">Confirmare parola:</label>
+                <input type="password" id="pwdInput">
+          
+
+                <input class="col-1" type="checkbox" id="newsletter" name="newsletter">
+                <label class="col-1" for="newsletter">Doresc sa ma abonez la newsletter!</label>
+<br>
+                
+                <input class="col-1" type="checkbox" id="terms" name="terms" required>
+                <label class="col-1" for="terms">Sunt de acord cu <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Termenii &
+                        Conditiile.</a>
+                    </label>
+
+                    <div class="button-group">
+                        <button class="btn " id="secondBackButton"  type="button">Back</button>
+                <input class="display-block btn " type="submit" value="Inregistrare">
+           
+           </div>
+                </div>
+
+
+
+    </form>
+
+
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

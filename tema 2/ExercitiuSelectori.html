@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+
+    <link rel="stylesheet" href="assets\css\primary.css">
+
+</head>
+<body>
+
+<!-- 1. toate elementele p din interiorul div-ului cu clasa 'abc' au culoare de fundal galben 
+    2. toatele elementele p care sunt copiii div-ului cu clasa 'abc' sunt scrise cu bold
+    3. toate elementele p din interiorul div-ului cu clasa 'abc', care sunt plasate fix dupa  un alt p, sunt subliniate
+    4.toate div-urile, frati cu div-ul care are clasa 'abc', au culoare de fundal lightblue
+    5. aplicati o culoare diferita pentru elementele a in starile link, visited, hover, active
+    6. primul copil al divului cu clasa "first-child" are un font de 24px
+    7. randurile pare din table au background color lightblue, randurile impare cornflowerblue; 
+        primul rand din tabel(header) are background color darkcyan (sau alte culori la alegere)
+    8.input de tip date are un background-color grey la focus;
+    9. Bonus: adaugati tooltip pt input-urile de tip text
+-->
+
+    <h1>Welcome!</h1>
+    <h2>Hello world!</h2>
+
+    <div class="abc">
+        <p>Paragraph with yellow background + bold.</p>
+        <p>I'm also a bold, yellow parahraph + underlined.</p>
+        <span>Span 1</span>
+        <section><p>Paragraph 3 in the div. Still yellow, not bold.</p></section>
+    </div>
+
+    <div class="first-child">
+        <h3>I'm in a lightblue div + 24px</h3>
+        <div><a href="https://www.w3schools.com/cssref/css_selectors.asp">Selectors</a></div>
+        
+    </div>
+    
+    <p>some p with no style</p>
+    
+    <div class="first-child">
+        <p>I'm in a lightblue div and I have 24px</p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Age</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+        </tbody> 
+        
+      </table>
+
+      <form>
+        <fieldset>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" name="name">
+            </div>
+            
+            <div>
+                <label for="birth-date">Birth date:</label>
+                <input type="date" value="" pattern="yyyy-dd-mm" name="birth-date">
+            </div> 
+            
+    
+           <div>
+               <label for="cnp">CNP</label>
+                <input type="text" name="cnp" minlength="13" maxlength="13" pattern="[1-7]{1}[0-9]{12}">
+           </div>
+    
+            <input type="submit" value="Save">
+
+        </fieldset>   
+      </form>
+      
+
+
+</body>
+</html>
